@@ -1,0 +1,50 @@
+﻿@model RegisterVM
+
+<section style="background-color: aliceblue; padding: 20px; padding-bottom: 50px">
+    <div class="container mt-5">
+        <h1 class="text-center">Sign Up</h1>
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="register-area mt-5" style="width:50%; margin: 0 auto">
+            <form method="post" asp-action="SignUp">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input asp-for="UserName" type="text" class="form-control" id="exampleInputEmail1">
+                    <span class="text-danger" asp-validation-for="UserName"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label">Fullname</label>
+                    <input asp-for="FullName" type="text" class="form-control" id="exampleInputEmail1">
+                    <span class="text-danger" asp-validation-for="FullName"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input asp-for="Email" type="text" class="form-control" id="exampleInputEmail1">
+                    <span class="text-danger" asp-validation-for="Email"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" id="exampleInputPassword1">
+                    <span class="text-danger" asp-validation-for="Password"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                    <input asp-for="ConfirmPassword" type="password" class="form-control" id="exampleInputPassword1">
+                    <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+
+                </div>
+                <div class="button-div d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mt-3 justify-content-center">Sign up</button>
+                </div>
+                <a asp-action="SignIn">Go to sign in</a>
+
+            </form>
+
+        </div>
+
+    </div>
+</section>
+        
+  

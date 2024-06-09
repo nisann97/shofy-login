@@ -1,0 +1,33 @@
+﻿
+@model LoginVM
+
+<section style="background-color: aliceblue; padding: 20px; padding-bottom: 50px">
+    <div class="container mt-5">
+        <h1 class="text-center">Sign In</h1>
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="register-area mt-5" style="width:50%; margin: 0 auto">
+            <form method="post" asp-action="SignIn">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="form-label">Email or username</label>
+                    <input asp-for="EmailOrUsername" type="text" class="form-control" id="exampleInputEmail1">
+                    <span class="text-danger" asp-validation-for="EmailOrUsername"></span>
+
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input asp-for="Password" type="password" class="form-control" id="exampleInputPassword1">
+                    <span class="text-danger" asp-validation-for="Password"></span>
+
+                </div>
+
+                <div class="button-div d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mt-3 justify-content-center">Sign in</button>
+                </div>
+                <a asp-action="SignUp">Go to sign up</a>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+

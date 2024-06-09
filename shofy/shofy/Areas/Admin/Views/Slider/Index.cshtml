@@ -1,0 +1,36 @@
+﻿@using shofy.ViewModels
+
+@model List<SliderVM>
+
+<div class="container">
+    <div class="table-responsive mt-5">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Slider
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td><img src="~/assets/images/@item.Image" style="width:160px !important;height:120px !important; border-radius:0 !important;" /></td>
+                        <td>
+                            <div class="btns">
+                                <a class="btn btn-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <form class="forms-sample d-inline" method="post" asp-action="Delete" asp-route-id="@item.Id"> <button class="btn btn-danger danger ">Delete</button></form>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
